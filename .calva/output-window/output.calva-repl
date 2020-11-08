@@ -18,39 +18,112 @@ clj::user=>
 
 ; Jack-in done.
 clj::user=> 
-#<CruxNode>
+; Syntax error compiling at (crux.clj:60:1).
+; No such namespace: crux
+clojure.lang.Compiler/analyze (Compiler.java:6808)
+clojure.lang.Compiler$InvokeExpr/parse (Compiler.java:3820)
+clojure.lang.Compiler/analyzeSeq (Compiler.java:7108)
+clojure.lang.Compiler/analyze (Compiler.java:6789)
+clojure.lang.Compiler$BodyExpr$Parser/parse (Compiler.java:6120)
+clojure.lang.Compiler$FnMethod/parse (Compiler.java:5467)
+clojure.lang.Compiler$FnExpr/parse (Compiler.java:4029)
+clojure.lang.Compiler/analyzeSeq (Compiler.java:7104)
+clojure.lang.Compiler/analyze (Compiler.java:6789)
+clojure.lang.Compiler/eval (Compiler.java:7173)
+clojure.core/eval (core.clj:3214)
+clojure.core/eval (core.clj:3210)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:665)
+clojure.core/with-bindings* (core.clj:1973)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:414)
+clojure.main/repl (main.clj:435)
+clojure.main/repl (main.clj:345)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:202)
+nrepl.middleware.session/session-exec (session.clj:201)
+java.lang.Thread/run (Thread.java:832)
 clj::user=> 
-#'user/crux
+#{}
 clj::user=> 
-#'user/manifest
+#{[:commodity/Pu] [:commodity/Au]}
 clj::user=> 
-#:crux.tx{:tx-id 0, :tx-time #inst "2020-11-08T04:14:09.344-00:00"}
+true
 clj::user=> 
-{:crux.db/id :manifest, :pilot-name "Johanna", :id/rocket "SB002-sol", :id/employee "22910x2", :badges "SETUP", :cargo ["stereo" "gold fish" "slippers" "secret note"]}
+#{[:commodity/Pu] [:commodity/Au]}
 clj::user=> 
-:manifes
+#{[:commodity/Pu] [:commodity/Au]}
 clj::user=> 
-:manifest
+true
 clj::user=> 
-nil
+true
 clj::user=> 
-{:crux.db/id :manifest, :pilot-name "Johanna", :id/rocket "SB002-sol", :id/employee "22910x2", :badges "SETUP", :cargo ["stereo" "gold fish" "slippers" "secret note"]}
+#{["Gold"] ["Plutonium"]}
 clj::user=> 
-#:crux.tx{:tx-id 1, :tx-time #inst "2020-11-08T04:43:54.463-00:00"}
+#{["Nitrogen" 1.2506] ["Carbon" 2.267] ["Methane" 0.717] ["Borax" 1.73] ["Gold" 19.3] ["Plutonium" 19.816]}
 clj::user=> 
-#:crux.tx{:tx-id 2, :tx-time #inst "2020-11-08T04:44:09.479-00:00"}
+#{["Nitrogen" 1.2506] ["Carbon" 2.267] ["Methane" 0.717] ["Borax" 1.73] ["Gold" 19.3] ["Plutonium" 19.816]}
 clj::user=> 
-#:crux.tx{:tx-id 3, :tx-time #inst "2020-11-08T04:50:15.657-00:00"}
+#{["Gold"] ["Plutonium"]}
 clj::user=> 
-#:crux.tx{:tx-id 4, :tx-time #inst "2020-11-08T04:51:27.093-00:00"}
+#{["Gold"] ["Plutonium"]}
 clj::user=> 
-{:crux.db/id :stock/Pu, :commod :commodity/Pu, :weight-ton 21}
+; Syntax error compiling at (crux.clj:111:1).
+; Unable to resolve symbol: filter-type in this context
+clojure.lang.Compiler/analyze (Compiler.java:6808)
+clojure.lang.Compiler$InvokeExpr/parse (Compiler.java:3820)
+clojure.lang.Compiler/analyzeSeq (Compiler.java:7108)
+clojure.lang.Compiler/analyze (Compiler.java:6789)
+clojure.lang.Compiler$BodyExpr$Parser/parse (Compiler.java:6120)
+clojure.lang.Compiler$FnMethod/parse (Compiler.java:5467)
+clojure.lang.Compiler$FnExpr/parse (Compiler.java:4029)
+clojure.lang.Compiler/analyzeSeq (Compiler.java:7104)
+clojure.lang.Compiler/analyze (Compiler.java:6789)
+clojure.lang.Compiler/eval (Compiler.java:7173)
+clojure.core/eval (core.clj:3214)
+clojure.core/eval (core.clj:3210)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:665)
+clojure.core/with-bindings* (core.clj:1973)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:414)
+clojure.main/repl (main.clj:435)
+clojure.main/repl (main.clj:345)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:202)
+nrepl.middleware.session/session-exec (session.clj:201)
+java.lang.Thread/run (Thread.java:832)
 clj::user=> 
-{:crux.db/id :stock/Pu, :commod :commodity/Pu, :weight-ton 22.2}
+#{["Gold"] ["Plutonium"]}
 clj::user=> 
-{:crux.db/id :stock/Pu, :commod :commodity/Pu, :weight-ton 23}
+#{}
 clj::user=> 
-#'user/easy-ingest
+; Syntax error compiling at (crux.clj:0:0).
+; Unable to resolve symbol: solid in this context
+clojure.lang.Compiler/analyze (Compiler.java:6808)
+clojure.lang.Compiler/eval (Compiler.java:7180)
+clojure.core/eval (core.clj:3214)
+clojure.core/eval (core.clj:3210)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:665)
+clojure.core/with-bindings* (core.clj:1973)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:414)
+clojure.main/repl (main.clj:435)
+clojure.main/repl (main.clj:345)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:202)
+nrepl.middleware.session/session-exec (session.clj:201)
+java.lang.Thread/run (Thread.java:832)
 clj::user=> 
-#:crux.tx{:tx-id 5, :tx-time #inst "2020-11-08T05:03:41.622-00:00"}
+#{["Borax" "Sodium tetraborate decahydrate"]}
 clj::user=> 
+#:crux.tx{:tx-id 1, :tx-time #inst "2020-11-08T05:43:45.826-00:00"}
+clj::user=> 
+; nREPL Connection was closed
