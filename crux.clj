@@ -3,113 +3,79 @@
 (def crux
   (crux/start-node {}))
 
-;; Chapter 3 Mercury
+;; Chapter 4 Neptune
+;; Querying with valid time
 
-(defn easy-ingest
-  "Uses Crux put transaction to add a vector of documents to a specified
-  node"
-  [node docs]
-  (crux/submit-tx node
-                  (vec (for [doc docs]
-                         [:crux.tx/put doc]))))
+(crux/submit-tx
+ crux
+ [[:crux.tx/put
+   {:crux.db/id :consumer/RJ29sUU
+    :consumer-id :RJ29sUU
+    :first-name "Jay"
+    :last-name "Rose"
+    :cover? true
+    :cover-type :Full}
+   #inst "2114-12-03"]])
 
-(def data
-  [{:crux.db/id :commodity/Pu
-    :common-name "Plutonium"
-    :type :element/metal
-    :density 19.816
-    :radioactive true}
+(crux/submit-tx
+ crux
+ [[:crux.tx/put	;; (1) 
+   {:crux.db/id :consumer/RJ29sUU
+    :consumer-id :RJ29sUU
+    :first-name "Jay"
+    :last-name "Rose"
+    :cover? true
+    :cover-type :Full}
+   #inst "2113-12-03" ;; Valid time start
+   #inst "2114-12-03"] ;; Valid time end
 
-   {:crux.db/id :commodity/N
-    :common-name "Nitrogen"
-    :type :element/gas
-    :density 1.2506
-    :radioactive false}
+  [:crux.tx/put  ;; (2)
+   {:crux.db/id :consumer/RJ29sUU
+    :consumer-id :RJ29sUU
+    :first-name "Jay"
+    :last-name "Rose"
+    :cover? true
+    :cover-type :Full}
+   #inst "2112-12-03"
+   #inst "2113-12-03"]
 
-   {:crux.db/id :commodity/CH4
-    :common-name "Methane"
-    :type :molecule/gas
-    :density 0.717
-    :radioactive false}
+  [:crux.tx/put	;; (3)
+   {:crux.db/id :consumer/RJ29sUU
+    :consumer-id :RJ29sUU
+    :first-name "Jay"
+    :last-name "Rose"
+    :cover? false}
+   #inst "2112-06-03"
+   #inst "2112-12-02"]
 
-   {:crux.db/id :commodity/Au
-    :common-name "Gold"
-    :type :element/metal
-    :density 19.300
-    :radioactive false}
+  [:crux.tx/put ;; (4)
+   {:crux.db/id :consumer/RJ29sUU
+    :consumer-id :RJ29sUU
+    :first-name "Jay"
+    :last-name "Rose"
+    :cover? true
+    :cover-type :Promotional}
+   #inst "2111-06-03"
+   #inst "2112-06-03"]])
 
-   {:crux.db/id :commodity/C
-    :common-name "Carbon"
-    :type :element/non-metal
-    :density 2.267
-    :radioactive false}
+(crux/q (crux/db crux #inst "2115-07-03")
+        '{:find [consumer_id cover type]
+          :where [[e :consumer-id consumer_id]
+                  [e :cover? cover]
+                  [e :cover-type type]]
+          :args [{:consumer_id :RJ29sUU}]})
 
-   {:crux.db/id :commodity/borax
-    :common-name "Borax"
-    :IUPAC-name "Sodium tetraborate decahydrate"
-    :other-names ["Borax decahydrate" "sodium borate" "sodium tetraborate" "disodium tetraborate"]
-    :type :mineral/solid
-    :appearance "white solid"
-    :density 1.73
-    :radioactive false}])
+(crux/q (crux/db crux #inst "2111-07-03")
+        '{:find [cover type]
+          :where [[e :consumer-id :RJ29sUU]
+                  [e :cover? cover]
+                  [e :cover-type type]]})
 
-
-(easy-ingest crux data)
-
-(crux/q (crux/db crux)
-        '{:find [element]
-          :where [[element :type :element/metal]]})
-
-(=
- (crux/q (crux/db crux)
-         '{:find [element]
-           :where [[element :type :element/metal]]})
-
- (crux/q (crux/db crux)
-         {:find '[element]
-          :where '[[element :type :element/metal]]})
-
- (crux/q (crux/db crux)
-         (quote
-          {:find [element]
-           :where [[element :type :element/metal]]})))
-
-(crux/q (crux/db crux)
-        '{:find [name]
-          :where [[e :type :element/metal]
-                  [e :common-name name]]})
-
-(crux/q (crux/db crux)
-        '{:find [name rho]
-          :where [[e :density rho]
-                  [e :common-name name]]})
-
-(crux/q (crux/db crux)
-        '{:find [name]
-          :where [[e :type t]
-                  [e :common-name name]]
-          :args [{t :element/metal}]})
-
-(defn filter-type
-  [type]
-  (crux/q (crux/db crux)
-          {:find '[name]
-           :where '[[e :type t]
-                    [e :common-name name]]
-           :args [{'t type}]}))
-
-(defn filter-appearance
-  [description]
-  (crux/q (crux/db crux)
-          {:find '[name IUPAC]
-           :where '[[e :common-name name]
-                    [e :IUPAC-name IUPAC]
-                    [e :appearance ?appearance]]
-           :args [{'?appearance description}]}))
-
-(filter-type :element/metal)
-
-(filter-appearance "white solid")
+(crux/q (crux/db crux #inst "2112-07-03")
+        '{:find [cover type]
+          :where [[e :consumer-id :RJ29sUU]
+                  [e :cover? cover]
+                  [e :cover-type type]]})
 
 (crux/submit-tx
  crux
@@ -118,5 +84,5 @@
     :pilot-name "Johanna"
     :id/rocket "SB002-sol"
     :id/employee "22910x2"
-    :badges ["SETUP" "PUT" "DATALOG-QUERIES"]
+    :badges ["SETUP" "PUT" "DATALOG-QUERIES" "BITEMP"]
     :cargo ["stereo" "gold fish" "slippers" "secret note"]}]])

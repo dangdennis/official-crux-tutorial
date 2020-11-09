@@ -18,18 +18,21 @@ clj::user=>
 
 ; Jack-in done.
 clj::user=> 
-; Syntax error compiling at (crux.clj:60:1).
-; No such namespace: crux
-clojure.lang.Compiler/analyze (Compiler.java:6808)
-clojure.lang.Compiler$InvokeExpr/parse (Compiler.java:3820)
-clojure.lang.Compiler/analyzeSeq (Compiler.java:7108)
-clojure.lang.Compiler/analyze (Compiler.java:6789)
-clojure.lang.Compiler$BodyExpr$Parser/parse (Compiler.java:6120)
-clojure.lang.Compiler$FnMethod/parse (Compiler.java:5467)
-clojure.lang.Compiler$FnExpr/parse (Compiler.java:4029)
-clojure.lang.Compiler/analyzeSeq (Compiler.java:7104)
-clojure.lang.Compiler/analyze (Compiler.java:6789)
-clojure.lang.Compiler/eval (Compiler.java:7173)
+#:crux.tx{:tx-id 1, :tx-time #inst "2020-11-09T01:03:09.633-00:00"}
+clj::user=> 
+#{[true :Full]}
+clj::user=> 
+; Execution error (IllegalArgumentException) at crux.query/query (query.clj:1664).
+; Find refers to unknown variable: consumer_id
+crux.query/query (query.clj:1664)
+crux.query/query (query.clj:1639)
+crux.query.QueryDatasource/fn (query.clj:1766)
+crux.query.QueryDatasource/openQuery (query.clj:1765)
+crux.query.QueryDatasource/query (query.clj:1728)
+crux.api/eval21276 (api.clj:326)
+crux.api/eval21131 (api.clj:233)
+user/eval34543 (NO_SOURCE_FILE:60)
+clojure.lang.Compiler/eval (Compiler.java:7176)
 clojure.core/eval (core.clj:3214)
 clojure.core/eval (core.clj:3210)
 nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
@@ -45,65 +48,9 @@ nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:1
 nrepl.middleware.session/session-exec (session.clj:202)
 nrepl.middleware.session/session-exec (session.clj:201)
 java.lang.Thread/run (Thread.java:832)
-clj::user=> 
-#{}
-clj::user=> 
-#{[:commodity/Pu] [:commodity/Au]}
-clj::user=> 
-true
-clj::user=> 
-#{[:commodity/Pu] [:commodity/Au]}
-clj::user=> 
-#{[:commodity/Pu] [:commodity/Au]}
-clj::user=> 
-true
-clj::user=> 
-true
-clj::user=> 
-#{["Gold"] ["Plutonium"]}
-clj::user=> 
-#{["Nitrogen" 1.2506] ["Carbon" 2.267] ["Methane" 0.717] ["Borax" 1.73] ["Gold" 19.3] ["Plutonium" 19.816]}
-clj::user=> 
-#{["Nitrogen" 1.2506] ["Carbon" 2.267] ["Methane" 0.717] ["Borax" 1.73] ["Gold" 19.3] ["Plutonium" 19.816]}
-clj::user=> 
-#{["Gold"] ["Plutonium"]}
-clj::user=> 
-#{["Gold"] ["Plutonium"]}
-clj::user=> 
-; Syntax error compiling at (crux.clj:111:1).
-; Unable to resolve symbol: filter-type in this context
-clojure.lang.Compiler/analyze (Compiler.java:6808)
-clojure.lang.Compiler$InvokeExpr/parse (Compiler.java:3820)
-clojure.lang.Compiler/analyzeSeq (Compiler.java:7108)
-clojure.lang.Compiler/analyze (Compiler.java:6789)
-clojure.lang.Compiler$BodyExpr$Parser/parse (Compiler.java:6120)
-clojure.lang.Compiler$FnMethod/parse (Compiler.java:5467)
-clojure.lang.Compiler$FnExpr/parse (Compiler.java:4029)
-clojure.lang.Compiler/analyzeSeq (Compiler.java:7104)
-clojure.lang.Compiler/analyze (Compiler.java:6789)
-clojure.lang.Compiler/eval (Compiler.java:7173)
-clojure.core/eval (core.clj:3214)
-clojure.core/eval (core.clj:3210)
-nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
-clojure.core/apply (core.clj:665)
-clojure.core/with-bindings* (core.clj:1973)
-nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
-clojure.main/repl (main.clj:414)
-clojure.main/repl (main.clj:435)
-clojure.main/repl (main.clj:345)
-nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
-nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
-nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
-nrepl.middleware.session/session-exec (session.clj:202)
-nrepl.middleware.session/session-exec (session.clj:201)
-java.lang.Thread/run (Thread.java:832)
-clj::user=> 
-#{["Gold"] ["Plutonium"]}
-clj::user=> 
-#{}
 clj::user=> 
 ; Syntax error compiling at (crux.clj:0:0).
-; Unable to resolve symbol: solid in this context
+; Unable to resolve symbol: consumer_id in this context
 clojure.lang.Compiler/analyze (Compiler.java:6808)
 clojure.lang.Compiler/eval (Compiler.java:7180)
 clojure.core/eval (core.clj:3214)
@@ -122,8 +69,9 @@ nrepl.middleware.session/session-exec (session.clj:202)
 nrepl.middleware.session/session-exec (session.clj:201)
 java.lang.Thread/run (Thread.java:832)
 clj::user=> 
-#{["Borax" "Sodium tetraborate decahydrate"]}
+#{[:RJ29sUU true :Full]}
 clj::user=> 
-#:crux.tx{:tx-id 1, :tx-time #inst "2020-11-08T05:43:45.826-00:00"}
+#{[true :Promotional]}
 clj::user=> 
-; nREPL Connection was closed
+#{}
+clj::user=> 
