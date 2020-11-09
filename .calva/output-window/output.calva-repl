@@ -1,56 +1,111 @@
-; This is the Calva evaluation results output window.
-; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
-;   when connected to a REPL session.
-; Please see https://calva.io/output/ for more info.
-; Happy coding! ♥️
-
-; Jacking in...
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS: 
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
+[{:crux.tx/tx-time #inst "2020-11-09T02:58:43.751-00:00",
+  :crux.tx/tx-id 0,
+  :crux.db/valid-time #inst "2116-01-01T00:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:08.719-00:00",
+  :crux.tx/tx-id 4,
+  :crux.db/valid-time #inst "2115-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:11.962-00:00",
+  :crux.tx/tx-id 5,
+  :crux.db/valid-time #inst "2114-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "d4bca6c78409d9d40ee42319a8aec32bffad9030",
+  :crux.db/doc {:crux.db/id :kaarlang/clients, :clients [:blue-energy :gold-harmony :tombaugh-resources]}}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:11.962-00:00",
+  :crux.tx/tx-id 5,
+  :crux.db/valid-time #inst "2113-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "000e5b775b55d06f0bddc77d736184284aa1e4e9",
+  :crux.db/doc {:crux.db/id :kaarlang/clients, :clients [:blue-energy]}}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:11.962-00:00",
+  :crux.tx/tx-id 5,
+  :crux.db/valid-time #inst "2111-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "cd71551fe21219db59067ce7483370fdebaae8b0",
+  :crux.db/doc {:crux.db/id :kaarlang/clients, :clients [:encompass-trade :blue-energy]}}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:11.962-00:00",
+  :crux.tx/tx-id 5,
+  :crux.db/valid-time #inst "2110-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "5ec42ea653288e01e1a9d7d2068b4658416177e0",
+  :crux.db/doc {:crux.db/id :kaarlang/clients, :clients [:encompass-trade]}}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:08.719-00:00",
+  :crux.tx/tx-id 4,
+  :crux.db/valid-time #inst "2110-01-01T00:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}]
 clj::user=> 
-
-; Jack-in done.
+#:crux.tx{:tx-id 6, :tx-time #inst "2020-11-09T04:17:26.432-00:00"}
 clj::user=> 
-#<CruxNode>
+[{:crux.tx/tx-time #inst "2020-11-09T02:58:43.751-00:00",
+  :crux.tx/tx-id 0,
+  :crux.db/valid-time #inst "2116-01-01T00:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:26.432-00:00",
+  :crux.tx/tx-id 6,
+  :crux.db/valid-time #inst "2115-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:26.432-00:00",
+  :crux.tx/tx-id 6,
+  :crux.db/valid-time #inst "2114-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:26.432-00:00",
+  :crux.tx/tx-id 6,
+  :crux.db/valid-time #inst "2113-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:26.432-00:00",
+  :crux.tx/tx-id 6,
+  :crux.db/valid-time #inst "2111-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:26.432-00:00",
+  :crux.tx/tx-id 6,
+  :crux.db/valid-time #inst "2110-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:26.432-00:00",
+  :crux.tx/tx-id 6,
+  :crux.db/valid-time #inst "2110-01-01T00:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}]
 clj::user=> 
-#'user/crux
+[{:crux.tx/tx-time #inst "2020-11-09T02:58:43.751-00:00",
+  :crux.tx/tx-id 0,
+  :crux.db/valid-time #inst "2116-01-01T00:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:26.432-00:00",
+  :crux.tx/tx-id 6,
+  :crux.db/valid-time #inst "2115-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:26.432-00:00",
+  :crux.tx/tx-id 6,
+  :crux.db/valid-time #inst "2114-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:26.432-00:00",
+  :crux.tx/tx-id 6,
+  :crux.db/valid-time #inst "2113-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:26.432-00:00",
+  :crux.tx/tx-id 6,
+  :crux.db/valid-time #inst "2111-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:26.432-00:00",
+  :crux.tx/tx-id 6,
+  :crux.db/valid-time #inst "2110-01-01T09:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}
+ {:crux.tx/tx-time #inst "2020-11-09T04:17:26.432-00:00",
+  :crux.tx/tx-id 6,
+  :crux.db/valid-time #inst "2110-01-01T00:00:00.000-00:00",
+  :crux.db/content-hash #crux/id "0000000000000000000000000000000000000000",
+  :crux.db/doc nil}]
 clj::user=> 
-#'user/manifest
-clj::user=> 
-#:crux.tx{:tx-id 0, :tx-time #inst "2020-11-08T04:14:09.344-00:00"}
-clj::user=> 
-{:crux.db/id :manifest, :pilot-name "Johanna", :id/rocket "SB002-sol", :id/employee "22910x2", :badges "SETUP", :cargo ["stereo" "gold fish" "slippers" "secret note"]}
-clj::user=> 
-:manifes
-clj::user=> 
-:manifest
-clj::user=> 
-nil
-clj::user=> 
-{:crux.db/id :manifest, :pilot-name "Johanna", :id/rocket "SB002-sol", :id/employee "22910x2", :badges "SETUP", :cargo ["stereo" "gold fish" "slippers" "secret note"]}
-clj::user=> 
-#:crux.tx{:tx-id 1, :tx-time #inst "2020-11-08T04:43:54.463-00:00"}
-clj::user=> 
-#:crux.tx{:tx-id 2, :tx-time #inst "2020-11-08T04:44:09.479-00:00"}
-clj::user=> 
-#:crux.tx{:tx-id 3, :tx-time #inst "2020-11-08T04:50:15.657-00:00"}
-clj::user=> 
-#:crux.tx{:tx-id 4, :tx-time #inst "2020-11-08T04:51:27.093-00:00"}
-clj::user=> 
-{:crux.db/id :stock/Pu, :commod :commodity/Pu, :weight-ton 21}
-clj::user=> 
-{:crux.db/id :stock/Pu, :commod :commodity/Pu, :weight-ton 22.2}
-clj::user=> 
-{:crux.db/id :stock/Pu, :commod :commodity/Pu, :weight-ton 23}
-clj::user=> 
-#'user/easy-ingest
-clj::user=> 
-#:crux.tx{:tx-id 5, :tx-time #inst "2020-11-08T05:03:41.622-00:00"}
-clj::user=> 
+; nREPL Connection was closed
