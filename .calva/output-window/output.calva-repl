@@ -18,39 +18,13 @@ clj::user=>
 
 ; Jack-in done.
 clj::user=> 
-#<CruxNode>
+#:crux.tx{:tx-id 2, :tx-time #inst "2020-11-09T02:15:12.391-00:00"}
 clj::user=> 
-#'user/crux
+("Name: Gold Harmony, Funds: 51, :units/Au 10211")
 clj::user=> 
-#'user/manifest
+("Name: Encompass Trade, Funds: 1002, :units/Au 10")
 clj::user=> 
-#:crux.tx{:tx-id 0, :tx-time #inst "2020-11-08T04:14:09.344-00:00"}
+#:crux.tx{:tx-id 3, :tx-time #inst "2020-11-09T02:19:17.658-00:00"}
 clj::user=> 
-{:crux.db/id :manifest, :pilot-name "Johanna", :id/rocket "SB002-sol", :id/employee "22910x2", :badges "SETUP", :cargo ["stereo" "gold fish" "slippers" "secret note"]}
-clj::user=> 
-:manifes
-clj::user=> 
-:manifest
-clj::user=> 
-nil
-clj::user=> 
-{:crux.db/id :manifest, :pilot-name "Johanna", :id/rocket "SB002-sol", :id/employee "22910x2", :badges "SETUP", :cargo ["stereo" "gold fish" "slippers" "secret note"]}
-clj::user=> 
-#:crux.tx{:tx-id 1, :tx-time #inst "2020-11-08T04:43:54.463-00:00"}
-clj::user=> 
-#:crux.tx{:tx-id 2, :tx-time #inst "2020-11-08T04:44:09.479-00:00"}
-clj::user=> 
-#:crux.tx{:tx-id 3, :tx-time #inst "2020-11-08T04:50:15.657-00:00"}
-clj::user=> 
-#:crux.tx{:tx-id 4, :tx-time #inst "2020-11-08T04:51:27.093-00:00"}
-clj::user=> 
-{:crux.db/id :stock/Pu, :commod :commodity/Pu, :weight-ton 21}
-clj::user=> 
-{:crux.db/id :stock/Pu, :commod :commodity/Pu, :weight-ton 22.2}
-clj::user=> 
-{:crux.db/id :stock/Pu, :commod :commodity/Pu, :weight-ton 23}
-clj::user=> 
-#'user/easy-ingest
-clj::user=> 
-#:crux.tx{:tx-id 5, :tx-time #inst "2020-11-08T05:03:41.622-00:00"}
+#{["secret note"]}
 clj::user=> 
